@@ -1,9 +1,19 @@
 [ignore]
 unit = [
+	"tests/pytests/unit/utils/test_x509.py",
+	"tests/unit/modules/test_boto3_elasticsearch.py",
+	"tests/unit/modules/test_boto3_route53.py",
+	"tests/unit/modules/test_boto_route53.py",
+	"tests/unit/states/test_module.py",
+	"tests/unit/utils/test_boto3mod.py",
 	"tests/unit/modules/test_boto3_elasticsearch.py",
 	"tests/unit/modules/test_boto3_route53.py",
 	"tests/unit/modules/test_boto_route53.py",
 	"tests/unit/utils/test_boto3mod.py",
+]
+integration = [
+	"tests/pytests/integration/modules/test_x509_v2.py",
+	"tests/pytests/integration/states/test_x509_v2.py",
 ]
 [skip]
 unit = [
@@ -146,6 +156,7 @@ functional = [
 	"tests/pytests/functional/runners/test_winrepo.py::test_update_git_repos",
 	"tests/pytests/functional/states/test_pip_state.py::test_pip_installed_name_test_mode",
 	"tests/pytests/functional/states/test_pip_state.py::test_pip_installed_pkgs_test_mode",
+	"tests/pytests/functional/transport/ipc/test_pub_server_channel.py::test_publish_to_pubserv_ipc",
 	"tests/pytests/functional/transport/tcp/test_message_client.py::test_message_client_reconnect",
 	"tests/pytests/functional/utils/pyinstaller/rthooks/test_salt_utils_vt_terminal.py::test_vt_terminal_environ_cleanup[LD_LIBRARY_PATH]",
 	"tests/pytests/functional/utils/pyinstaller/rthooks/test_salt_utils_vt_terminal.py::test_vt_terminal_environ_cleanup_original[LD_LIBRARY_PATH]",
