@@ -121,10 +121,11 @@ unit = [
 	"tests/unit/utils/test_templates.py::RenderTestCase::test_render_mako_variable",
 ]
 integration = [
+	"tests/integration/loader/test_ext_modules.py",  # Make pytest to stuck in sle15sp1 classic pkg
 	"tests/integration/modules/test_cmdmod.py::CMDModuleTest::test_which_bin",
 	"tests/pytests/integration/master/test_clear_funcs.py::test_clearfuncs_config",
-	"tests/pytests/integration/master/test_clear_funcs.py::test_fileroots_write",
 	"tests/pytests/integration/master/test_clear_funcs.py::test_fileroots_read",
+	"tests/pytests/integration/master/test_clear_funcs.py::test_fileroots_write",
 	"tests/pytests/integration/netapi/rest_tornado/test_minions_api_handler.py::test_get_no_mid",
 	"tests/pytests/integration/netapi/rest_tornado/test_root_handler.py::test_simple_local_post",
 	"tests/pytests/integration/netapi/rest_tornado/test_root_handler.py::test_simple_local_post_only_dictionary_request",
