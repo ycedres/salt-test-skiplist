@@ -82,11 +82,17 @@ unit = [
 	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_absent_when_stage_is_valid_and_only_one_stage_is_associated_to_deployment",
 	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_absent_when_stage_is_valid_and_two_stages_are_associated_to_deployment",
 	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_present_when_stage_associating_to_new_deployment_errored_on_api_creation",
+	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_present_when_stage_associating_to_new_deployment_errored_on_lambda_function_lookup",  # missing boto libraries
 	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_present_when_stage_associating_to_new_deployment_errored_on_model_creation",
+	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_present_when_stage_associating_to_new_deployment_errored_on_put_integration",  # missing boto libraries
+	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_present_when_stage_associating_to_new_deployment_errored_on_put_integration_response",  # missing boto libraries
+	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_present_when_stage_associating_to_new_deployment_errored_on_put_method",  # missing boto libraries
+	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_present_when_stage_associating_to_new_deployment_errored_on_put_method_response",  # missing boto libraries
 	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_present_when_stage_associating_to_new_deployment_errored_on_resource_creation",
 	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_present_when_stage_exists_and_is_to_associate_to_existing_deployment",
 	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_present_when_stage_is_already_at_desired_deployment",
 	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_present_when_stage_is_already_at_desired_deployment_and_needs_stage_variables_update",
+	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_present_when_stage_is_to_associate_to_new_deployment",  # missing boto libraries
 	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_present_when_swagger_file_is_invalid",
 	"tests/unit/states/test_boto_cognitoidentity.py::BotoCognitoIdentityTestCase::test_absent_when_a_single_pool_exists",
 	"tests/unit/states/test_boto_cognitoidentity.py::BotoCognitoIdentityTestCase::test_absent_when_erroring_on_delete_identity_pool",
@@ -97,8 +103,11 @@ unit = [
 	"tests/unit/states/test_boto_cognitoidentity.py::BotoCognitoIdentityTestCase::test_present_when_failing_to_create_a_new_identity_pool",
 	"tests/unit/states/test_boto_cognitoidentity.py::BotoCognitoIdentityTestCase::test_present_when_failing_to_describe_identity_pools",
 	"tests/unit/states/test_boto_cognitoidentity.py::BotoCognitoIdentityTestCase::test_present_when_failing_to_get_identity_pool_roles",
+	"tests/unit/states/test_boto_cognitoidentity.py::BotoCognitoIdentityTestCase::test_present_when_failing_to_set_identity_pool_roles",  # missing boto libraries
 	"tests/unit/states/test_boto_cognitoidentity.py::BotoCognitoIdentityTestCase::test_present_when_failing_to_update_an_existing_identity_pool",
 	"tests/unit/states/test_boto_cognitoidentity.py::BotoCognitoIdentityTestCase::test_present_when_multiple_pools_with_same_name_exist",
+	"tests/unit/states/test_boto_cognitoidentity.py::BotoCognitoIdentityTestCase::test_present_when_pool_name_does_not_exist",  # missing boto libraries
+	"tests/unit/states/test_boto_cognitoidentity.py::BotoCognitoIdentityTestCase::test_present_when_pool_name_exists",  # missing boto libraries
 	"tests/unit/test_config.py::APIConfigTestCase::test_api_config_log_file_values",
 	"tests/unit/test_config.py::APIConfigTestCase::test_api_config_prepend_root_dirs_return",
 	"tests/unit/test_config.py::ConfigTestCase::test_load_minion_config_from_environ_var",
