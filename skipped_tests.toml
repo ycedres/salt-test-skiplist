@@ -136,6 +136,7 @@ integration = [
 	"tests/pytests/integration/runners/state/orchestrate/test_events.py::test_jid_in_ret_event",
 	"tests/pytests/integration/runners/state/orchestrate/test_events.py::test_orchestration_with_pillar_dot_items",
 	"tests/pytests/integration/runners/state/orchestrate/test_events.py::test_parallel_orchestrations",
+	"tests/integration/ssh/test_state.py::SSHStateTest::test_state_running",  # This test makes no sense with new locking mechanism for Salt SSH
 ]
 functional = [
 	"tests/pytests/functional/channel/test_server.py::test_pub_server_channel[transport(zeromq)]",
