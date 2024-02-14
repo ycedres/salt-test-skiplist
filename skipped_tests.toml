@@ -55,9 +55,6 @@ unit = [
 	"tests/pytests/unit/modules/test_transactional_update.py::test_call_success_parameters",
 	"tests/pytests/unit/modules/test_transactional_update.py::test_call_success_reboot",
 	"tests/pytests/unit/states/file/test_tidied.py::test_tidied_age_size_args_AND_operator_age_not_size",
-	"tests/unit/modules/test_zcbuildout.py::BuildoutOnlineTestCase::test_buildout",  # Unmaintained test - skipped upstream
-	"tests/unit/modules/test_zcbuildout.py::BuildoutOnlineTestCase::test_run_buildout",  # Unmaintained test - skipped upstream
-	"tests/unit/states/test_zcbuildout.py::BuildoutTestCase::test_installed",  # Unmaintained test - skipped upstream
 	"tests/pytests/unit/states/file/test_tidied.py::test_tidied_age_size_args_AND_operator_size_not_age",
 	"tests/pytests/unit/states/test_pkgrepo.py::test_migrated_wrong_method",
 	"tests/pytests/unit/utils/test_gitfs.py::test_full_id_pygit2",
@@ -73,6 +70,8 @@ unit = [
 	"tests/unit/cli/test_support.py::ProfileIntegrityTestCase::test_non_template_profiles_parseable",
 	"tests/unit/cli/test_support.py::ProfileIntegrityTestCase::test_users_template_profile",
 	"tests/unit/modules/test_dpkg_lowpkg.py::DpkgTestCase::test_info",
+	"tests/unit/modules/test_zcbuildout.py::BuildoutOnlineTestCase::test_buildout",  # Unmaintained test - skipped upstream
+	"tests/unit/modules/test_zcbuildout.py::BuildoutOnlineTestCase::test_run_buildout",  # Unmaintained test - skipped upstream
 	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_absent_when_failing_to_delete_a_deployment_no_longer_associated_with_any_stages",
 	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_absent_when_nuke_api_and_no_more_stages_deployments_remain",
 	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_absent_when_nuke_api_and_other_stages_deployments_exist",
@@ -107,6 +106,7 @@ unit = [
 	"tests/unit/states/test_boto_cognitoidentity.py::BotoCognitoIdentityTestCase::test_present_when_multiple_pools_with_same_name_exist",
 	"tests/unit/states/test_boto_cognitoidentity.py::BotoCognitoIdentityTestCase::test_present_when_pool_name_does_not_exist",  # missing boto libraries
 	"tests/unit/states/test_boto_cognitoidentity.py::BotoCognitoIdentityTestCase::test_present_when_pool_name_exists",  # missing boto libraries
+	"tests/unit/states/test_zcbuildout.py::BuildoutTestCase::test_installed",  # Unmaintained test - skipped upstream
 	"tests/unit/test_config.py::APIConfigTestCase::test_api_config_log_file_values",
 	"tests/unit/test_config.py::APIConfigTestCase::test_api_config_prepend_root_dirs_return",
 	"tests/unit/test_config.py::ConfigTestCase::test_load_minion_config_from_environ_var",
@@ -127,6 +127,7 @@ unit = [
 integration = [
 	"tests/integration/loader/test_ext_modules.py",  # Make pytest to stuck in sle15sp1 classic pkg
 	"tests/integration/modules/test_cmdmod.py::CMDModuleTest::test_which_bin",
+	"tests/integration/ssh/test_state.py::SSHStateTest::test_state_running",  # This test makes no sense with new locking mechanism for Salt SSH
 	"tests/pytests/integration/master/test_clear_funcs.py::test_clearfuncs_config",
 	"tests/pytests/integration/master/test_clear_funcs.py::test_fileroots_read",
 	"tests/pytests/integration/master/test_clear_funcs.py::test_fileroots_write",
@@ -136,7 +137,7 @@ integration = [
 	"tests/pytests/integration/runners/state/orchestrate/test_events.py::test_jid_in_ret_event",
 	"tests/pytests/integration/runners/state/orchestrate/test_events.py::test_orchestration_with_pillar_dot_items",
 	"tests/pytests/integration/runners/state/orchestrate/test_events.py::test_parallel_orchestrations",
-	"tests/integration/ssh/test_state.py::SSHStateTest::test_state_running",  # This test makes no sense with new locking mechanism for Salt SSH
+	"tests/pytests/integration/ssh/test_master.py::test_service",  # Failing when running on containers. dbus not available
 ]
 functional = [
 	"tests/pytests/functional/channel/test_server.py::test_pub_server_channel[transport(zeromq)]",
