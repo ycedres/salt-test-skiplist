@@ -70,43 +70,6 @@ unit = [
 	"tests/unit/cli/test_support.py::ProfileIntegrityTestCase::test_non_template_profiles_parseable",
 	"tests/unit/cli/test_support.py::ProfileIntegrityTestCase::test_users_template_profile",
 	"tests/unit/modules/test_dpkg_lowpkg.py::DpkgTestCase::test_info",
-	"tests/unit/modules/test_zcbuildout.py::BuildoutOnlineTestCase::test_buildout",  # Unmaintained test - skipped upstream
-	"tests/unit/modules/test_zcbuildout.py::BuildoutOnlineTestCase::test_run_buildout",  # Unmaintained test - skipped upstream
-	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_absent_when_failing_to_delete_a_deployment_no_longer_associated_with_any_stages",
-	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_absent_when_nuke_api_and_no_more_stages_deployments_remain",
-	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_absent_when_nuke_api_and_other_stages_deployments_exist",
-	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_absent_when_rest_api_does_not_exist",
-	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_absent_when_stage_is_invalid",
-	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_absent_when_stage_is_valid_and_only_one_stage_is_associated_to_deployment",
-	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_absent_when_stage_is_valid_and_two_stages_are_associated_to_deployment",
-	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_present_when_stage_associating_to_new_deployment_errored_on_api_creation",
-	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_present_when_stage_associating_to_new_deployment_errored_on_lambda_function_lookup",  # missing boto libraries
-	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_present_when_stage_associating_to_new_deployment_errored_on_model_creation",
-	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_present_when_stage_associating_to_new_deployment_errored_on_put_integration",  # missing boto libraries
-	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_present_when_stage_associating_to_new_deployment_errored_on_put_integration_response",  # missing boto libraries
-	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_present_when_stage_associating_to_new_deployment_errored_on_put_method",  # missing boto libraries
-	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_present_when_stage_associating_to_new_deployment_errored_on_put_method_response",  # missing boto libraries
-	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_present_when_stage_associating_to_new_deployment_errored_on_resource_creation",
-	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_present_when_stage_exists_and_is_to_associate_to_existing_deployment",
-	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_present_when_stage_is_already_at_desired_deployment",
-	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_present_when_stage_is_already_at_desired_deployment_and_needs_stage_variables_update",
-	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_present_when_stage_is_to_associate_to_new_deployment",  # missing boto libraries
-	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_present_when_swagger_file_is_invalid",
-	"tests/unit/states/test_boto_cognitoidentity.py::BotoCognitoIdentityTestCase::test_absent_when_a_single_pool_exists",
-	"tests/unit/states/test_boto_cognitoidentity.py::BotoCognitoIdentityTestCase::test_absent_when_erroring_on_delete_identity_pool",
-	"tests/unit/states/test_boto_cognitoidentity.py::BotoCognitoIdentityTestCase::test_absent_when_failing_to_describe_identity_pools",
-	"tests/unit/states/test_boto_cognitoidentity.py::BotoCognitoIdentityTestCase::test_absent_when_multiple_pool_exists_and_removeallmatched_flag_is_true",
-	"tests/unit/states/test_boto_cognitoidentity.py::BotoCognitoIdentityTestCase::test_absent_when_pool_does_not_exist",
-	"tests/unit/states/test_boto_cognitoidentity.py::BotoCognitoIdentityTestCase::test_absent_when_removeallmatched_is_false_and_multiple_pools_matched",
-	"tests/unit/states/test_boto_cognitoidentity.py::BotoCognitoIdentityTestCase::test_present_when_failing_to_create_a_new_identity_pool",
-	"tests/unit/states/test_boto_cognitoidentity.py::BotoCognitoIdentityTestCase::test_present_when_failing_to_describe_identity_pools",
-	"tests/unit/states/test_boto_cognitoidentity.py::BotoCognitoIdentityTestCase::test_present_when_failing_to_get_identity_pool_roles",
-	"tests/unit/states/test_boto_cognitoidentity.py::BotoCognitoIdentityTestCase::test_present_when_failing_to_set_identity_pool_roles",  # missing boto libraries
-	"tests/unit/states/test_boto_cognitoidentity.py::BotoCognitoIdentityTestCase::test_present_when_failing_to_update_an_existing_identity_pool",
-	"tests/unit/states/test_boto_cognitoidentity.py::BotoCognitoIdentityTestCase::test_present_when_multiple_pools_with_same_name_exist",
-	"tests/unit/states/test_boto_cognitoidentity.py::BotoCognitoIdentityTestCase::test_present_when_pool_name_does_not_exist",  # missing boto libraries
-	"tests/unit/states/test_boto_cognitoidentity.py::BotoCognitoIdentityTestCase::test_present_when_pool_name_exists",  # missing boto libraries
-	"tests/unit/states/test_zcbuildout.py::BuildoutTestCase::test_installed",  # Unmaintained test - skipped upstream
 	"tests/unit/test_config.py::APIConfigTestCase::test_api_config_log_file_values",
 	"tests/unit/test_config.py::APIConfigTestCase::test_api_config_prepend_root_dirs_return",
 	"tests/unit/test_config.py::ConfigTestCase::test_load_minion_config_from_environ_var",
@@ -127,7 +90,6 @@ unit = [
 integration = [
 	"tests/integration/loader/test_ext_modules.py",  # Make pytest to stuck in sle15sp1 classic pkg
 	"tests/integration/modules/test_cmdmod.py::CMDModuleTest::test_which_bin",
-	"tests/integration/ssh/test_state.py::SSHStateTest::test_state_running",  # This test makes no sense with new locking mechanism for Salt SSH
 	"tests/pytests/integration/master/test_clear_funcs.py::test_clearfuncs_config",
 	"tests/pytests/integration/master/test_clear_funcs.py::test_fileroots_read",
 	"tests/pytests/integration/master/test_clear_funcs.py::test_fileroots_write",
@@ -137,7 +99,6 @@ integration = [
 	"tests/pytests/integration/runners/state/orchestrate/test_events.py::test_jid_in_ret_event",
 	"tests/pytests/integration/runners/state/orchestrate/test_events.py::test_orchestration_with_pillar_dot_items",
 	"tests/pytests/integration/runners/state/orchestrate/test_events.py::test_parallel_orchestrations",
-	"tests/pytests/integration/ssh/test_master.py::test_service",  # Failing when running on containers. dbus not available
 ]
 functional = [
 	"tests/pytests/functional/channel/test_server.py::test_pub_server_channel[transport(zeromq)]",
