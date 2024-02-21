@@ -5,6 +5,8 @@ unit = [
 	"tests/unit/modules/test_boto_route53.py",
 	"tests/unit/utils/test_boto3mod.py",
 ]
+integration = [
+]
 [skip]
 unit = [
 	"tests/pytests/unit/grains/test_core.py::test_get_server_id",
@@ -68,31 +70,6 @@ unit = [
 	"tests/unit/cli/test_support.py::ProfileIntegrityTestCase::test_non_template_profiles_parseable",
 	"tests/unit/cli/test_support.py::ProfileIntegrityTestCase::test_users_template_profile",
 	"tests/unit/modules/test_dpkg_lowpkg.py::DpkgTestCase::test_info",
-	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_absent_when_failing_to_delete_a_deployment_no_longer_associated_with_any_stages",
-	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_absent_when_nuke_api_and_no_more_stages_deployments_remain",
-	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_absent_when_nuke_api_and_other_stages_deployments_exist",
-	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_absent_when_rest_api_does_not_exist",
-	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_absent_when_stage_is_invalid",
-	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_absent_when_stage_is_valid_and_only_one_stage_is_associated_to_deployment",
-	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_absent_when_stage_is_valid_and_two_stages_are_associated_to_deployment",
-	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_present_when_stage_associating_to_new_deployment_errored_on_api_creation",
-	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_present_when_stage_associating_to_new_deployment_errored_on_model_creation",
-	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_present_when_stage_associating_to_new_deployment_errored_on_resource_creation",
-	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_present_when_stage_exists_and_is_to_associate_to_existing_deployment",
-	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_present_when_stage_is_already_at_desired_deployment",
-	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_present_when_stage_is_already_at_desired_deployment_and_needs_stage_variables_update",
-	"tests/unit/states/test_boto_apigateway.py::BotoApiGatewayTestCase::test_present_when_swagger_file_is_invalid",
-	"tests/unit/states/test_boto_cognitoidentity.py::BotoCognitoIdentityTestCase::test_absent_when_a_single_pool_exists",
-	"tests/unit/states/test_boto_cognitoidentity.py::BotoCognitoIdentityTestCase::test_absent_when_erroring_on_delete_identity_pool",
-	"tests/unit/states/test_boto_cognitoidentity.py::BotoCognitoIdentityTestCase::test_absent_when_failing_to_describe_identity_pools",
-	"tests/unit/states/test_boto_cognitoidentity.py::BotoCognitoIdentityTestCase::test_absent_when_multiple_pool_exists_and_removeallmatched_flag_is_true",
-	"tests/unit/states/test_boto_cognitoidentity.py::BotoCognitoIdentityTestCase::test_absent_when_pool_does_not_exist",
-	"tests/unit/states/test_boto_cognitoidentity.py::BotoCognitoIdentityTestCase::test_absent_when_removeallmatched_is_false_and_multiple_pools_matched",
-	"tests/unit/states/test_boto_cognitoidentity.py::BotoCognitoIdentityTestCase::test_present_when_failing_to_create_a_new_identity_pool",
-	"tests/unit/states/test_boto_cognitoidentity.py::BotoCognitoIdentityTestCase::test_present_when_failing_to_describe_identity_pools",
-	"tests/unit/states/test_boto_cognitoidentity.py::BotoCognitoIdentityTestCase::test_present_when_failing_to_get_identity_pool_roles",
-	"tests/unit/states/test_boto_cognitoidentity.py::BotoCognitoIdentityTestCase::test_present_when_failing_to_update_an_existing_identity_pool",
-	"tests/unit/states/test_boto_cognitoidentity.py::BotoCognitoIdentityTestCase::test_present_when_multiple_pools_with_same_name_exist",
 	"tests/unit/test_config.py::APIConfigTestCase::test_api_config_log_file_values",
 	"tests/unit/test_config.py::APIConfigTestCase::test_api_config_prepend_root_dirs_return",
 	"tests/unit/test_config.py::ConfigTestCase::test_load_minion_config_from_environ_var",
@@ -111,10 +88,11 @@ unit = [
 	"tests/unit/utils/test_templates.py::RenderTestCase::test_render_mako_variable",
 ]
 integration = [
+	"tests/integration/loader/test_ext_modules.py",  # Make pytest to stuck in sle15sp1 classic pkg
 	"tests/integration/modules/test_cmdmod.py::CMDModuleTest::test_which_bin",
 	"tests/pytests/integration/master/test_clear_funcs.py::test_clearfuncs_config",
-	"tests/pytests/integration/master/test_clear_funcs.py::test_fileroots_write",
 	"tests/pytests/integration/master/test_clear_funcs.py::test_fileroots_read",
+	"tests/pytests/integration/master/test_clear_funcs.py::test_fileroots_write",
 	"tests/pytests/integration/netapi/rest_tornado/test_minions_api_handler.py::test_get_no_mid",
 	"tests/pytests/integration/netapi/rest_tornado/test_root_handler.py::test_simple_local_post",
 	"tests/pytests/integration/netapi/rest_tornado/test_root_handler.py::test_simple_local_post_only_dictionary_request",
@@ -146,7 +124,10 @@ functional = [
 	"tests/pytests/functional/runners/test_winrepo.py::test_update_git_repos",
 	"tests/pytests/functional/states/test_pip_state.py::test_pip_installed_name_test_mode",
 	"tests/pytests/functional/states/test_pip_state.py::test_pip_installed_pkgs_test_mode",
+	"tests/pytests/functional/transport/ipc/test_pub_server_channel.py::test_issue_36469_tcp",  # Make pytest to hang on sle15sp1
+	"tests/pytests/functional/transport/ipc/test_pub_server_channel.py::test_publish_to_pubserv_ipc",  # Make pytest to hang during cleanup
 	"tests/pytests/functional/transport/tcp/test_message_client.py::test_message_client_reconnect",
+	"tests/pytests/functional/transport/zeromq/test_pub_server_channel.py::test_zeromq_filtering",  # Make pytest to hang on sle15sp1
 	"tests/pytests/functional/utils/pyinstaller/rthooks/test_salt_utils_vt_terminal.py::test_vt_terminal_environ_cleanup[LD_LIBRARY_PATH]",
 	"tests/pytests/functional/utils/pyinstaller/rthooks/test_salt_utils_vt_terminal.py::test_vt_terminal_environ_cleanup_original[LD_LIBRARY_PATH]",
 	"tests/pytests/functional/utils/pyinstaller/rthooks/test_salt_utils_vt_terminal.py::test_vt_terminal_environ_cleanup_original_passed_directly[LD_LIBRARY_PATH]",
