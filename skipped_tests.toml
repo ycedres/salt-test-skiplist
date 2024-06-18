@@ -163,12 +163,21 @@ functional = [
 	"tests/pytests/functional/states/test_x509_v2.py::test_crl_managed_existing_not_a_crl[1234]",  # Needs investigation: Fails only with Salt Bundle - assert False is True
 	"tests/pytests/functional/states/test_x509_v2.py::test_crl_managed_existing_signing_key_change[existing_crl0]",  # Needs investigation: Fails only with Salt Bundle - assert False is True
 	"tests/pytests/functional/states/test_x509_v2.py::test_csr_managed_existing_not_a_csr[1234]",  # Needs investigation: Fails only with Salt Bundle - assert False is True
+	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed_algo_change[existing_pk0]",  # Needs investigation: Fails only with Salt Bundle
+	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed_existing[existing_pk2]",  # Needs investigation: Fails only with Salt Bundle
+	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed_existing[existing_pk3]",  # Needs investigation: Fails only with Salt Bundle
 	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed_existing_not_a_pk[1234-False]",  # Needs investigation: Fails only with Salt Bundle - assert 'does not seem to be a private key' in 'An exception occurred in this state: Traceback (most recent call last):\n  File "/usr/lib/venv-salt-minion/lib64/python3.11/site-packages/...
 	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed_existing_not_a_pk[1234-True]",  # Needs investigation: Fails only with Salt Bundle - assert False == True
 	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed[hunter1-der-ec]",  # Needs investigation: Fails only with Salt Bundle - AttributeError: module 'lib' has no attribute 'ERR_GET_LIB'
 	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed[hunter1-der-ed25519]",  # Needs investigation: Fails only with Salt Bundle - AttributeError: module 'lib' has no attribute 'ERR_GET_LIB'
 	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed[hunter1-der-ed448]",  # Needs investigation: Fails only with Salt Bundle - AttributeError: module 'lib' has no attribute 'ERR_GET_LIB'
 	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed[hunter1-der-rsa]",  # Needs investigation: Fails only with Salt Bundle - AttributeError: module 'lib' has no attribute 'ERR_GET_LIB'
+	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed[hunter1-pem-ed25519]",  # Needs investigation: Fails only with Salt Bundle
+	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed[hunter1-pem-ed448]",  # Needs investigation: Fails only with Salt Bundle
+	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed[None-der-ed25519]",  # Needs investigation: Fails only with Salt Bundle
+	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed[None-der-ed448]",  # Needs investigation: Fails only with Salt Bundle
+	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed[None-pem-ed25519]",  # Needs investigation: Fails only with Salt Bundle
+	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed[None-pem-ed448]",  # Needs investigation: Fails only with Salt Bundle
 	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed_passphrase_changed_not_overwrite[existing_pk0]",  # Needs investigation: Fails only with Salt Bundle - assert 'The provided passphrase cannot decrypt the private key. Pass overwrite' in 'An exception occurred in this state: Traceback (most recent call last):\n  File "/usr/lib/venv-salt-m...
 	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed_passphrase_changed_overwrite[existing_pk0]",  # Needs investigation: Fails only with Salt Bundle - assert False
 	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed_passphrase_removed_not_overwrite[existing_pk0]",  # Needs investigation: Fails only with Salt Bundle
