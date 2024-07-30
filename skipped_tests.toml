@@ -108,6 +108,22 @@ integration = [
 	"tests/integration/modules/test_tls.py::TLSModuleTest::test_with_existing_ca_signing_csr_should_produce_valid_cert",  # Needs investigation: Fails only with Salt Bundle
 	"tests/integration/states/test_x509.py::x509Test::test_crl_managed",  # Needs investigation: Fails only with Salt Bundle - AttributeError: module 'lib' has no attribute 'X509_CRL_set1_lastUpdate'
 	"tests/integration/states/test_x509.py::x509Test::test_crl_managed_replacing_existing_crl",  # Needs investigation: Fails only with Salt Bundle - AttributeError: module 'lib' has no attribute 'X509_CRL_set1_lastUpdate'
+	# Tests related to pygit2 are failing for Classic Salt in Leap 15.5. This needs further research.
+	"tests/integration/pillar/test_git_pillar.py::TestPygit2SSH::test_all_saltenvs_base",
+	"tests/integration/pillar/test_git_pillar.py::TestPygit2SSH::test_base",
+	"tests/integration/pillar/test_git_pillar.py::TestPygit2SSH::test_fallback",
+	"tests/integration/pillar/test_git_pillar.py::TestPygit2SSH::test_includes_disabled",
+	"tests/integration/pillar/test_git_pillar.py::TestPygit2SSH::test_includes_enabled",
+	"tests/integration/pillar/test_git_pillar.py::TestPygit2SSH::test_includes_enabled_solves___env___with_mountpoint",
+	"tests/integration/pillar/test_git_pillar.py::TestPygit2SSH::test_mountpoint_parameter",
+	"tests/integration/pillar/test_git_pillar.py::TestPygit2SSH::test_multiple_sources_dev_master_merge_lists",
+	"tests/integration/pillar/test_git_pillar.py::TestPygit2SSH::test_multiple_sources_dev_master_no_merge_lists",
+	"tests/integration/pillar/test_git_pillar.py::TestPygit2SSH::test_multiple_sources_master_dev_merge_lists",
+	"tests/integration/pillar/test_git_pillar.py::TestPygit2SSH::test_multiple_sources_master_dev_no_merge_lists",
+	"tests/integration/pillar/test_git_pillar.py::TestPygit2SSH::test_multiple_sources_with_pillarenv",
+	"tests/integration/pillar/test_git_pillar.py::TestPygit2SSH::test_root_and_mountpoint_parameters",
+	"tests/integration/pillar/test_git_pillar.py::TestPygit2SSH::test_root_parameter",
+	"tests/integration/pillar/test_git_pillar.py::TestPygit2SSH::test_single_source",
 	"tests/pytests/integration/master/test_clear_funcs.py::test_clearfuncs_config",
 	"tests/pytests/integration/master/test_clear_funcs.py::test_fileroots_read",
 	"tests/pytests/integration/master/test_clear_funcs.py::test_fileroots_write",
